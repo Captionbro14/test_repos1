@@ -522,7 +522,7 @@ async def save_template(client, message):
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
 
 
-@Client.on_message(filters.command("short") & filters.private)
+@Client.on_message(filters.command("short") & filters.private & filters.user(ADMINS))
 async def link_handler(bot, message):
     link = message.command[1]
     try:
