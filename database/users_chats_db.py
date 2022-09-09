@@ -1,5 +1,5 @@
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
-import shortz
+import shortzy
 import motor.motor_asyncio
 from info import SHORTENER_API, DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, LONG_DROPLINK_URL, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT
 
