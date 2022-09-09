@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase If You Want This Movie Join Our Request Group And Request - https://t.me/+BDvuprV0ctVkOTE1')
+            k = await query.message.edit('This Movie Not Found In DataBase')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -713,7 +713,7 @@ async def auto_filter(client, msg, spoll=False):
         try:
           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-          await asyncio.sleep(300)
+          await asyncio.sleep(600)
           await message.delete()
           await a.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
