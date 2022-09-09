@@ -16,7 +16,7 @@
       "inline"
     ],
     "website": "https://github.com/EvamariaTG/EvaMaria",
-    "repository": "https://github.com/test00123/my_trdt_rep",
+    "repository": "https://github.com/test00123/test_repos",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
