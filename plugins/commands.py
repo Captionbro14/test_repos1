@@ -246,8 +246,8 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-        await asyncio.sleep(1800) 
-        await dl.delete()                   
+    await asyncio.sleep(1800) 
+    await dl.delete()                   
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
