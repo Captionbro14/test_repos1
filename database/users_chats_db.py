@@ -1,6 +1,7 @@
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
+import shortz
 import motor.motor_asyncio
-from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT
+from info import SHORTENER_API, DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, LONG_DROPLINK_URL, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT
 
 class Database:
     
@@ -144,3 +145,14 @@ class Database:
 
 
 db = Database(DATABASE_URI, DATABASE_NAME)
+
+shortz = shortzy.Shortzy(SHORTENER_API, "Mb.masterbaba.in")
+async def get_shortlink(link):
+    if SHORTENER_API:
+        if LONG_DROPLINK_URL == "True" or LONG_DROPLINK_URL is True:
+            return await shortz.get_quick_link(link)
+        else:
+            return await shortz.convert(link, silently_fail=False)
+    return link
+
+
