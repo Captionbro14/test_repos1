@@ -1,4 +1,4 @@
-# Kanged From @sahid_malik
+# Kanged From sahid_malik
 import asyncio
 import re
 import ast
