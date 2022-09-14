@@ -146,7 +146,7 @@ class Database:
 
 db = Database(DATABASE_URI, DATABASE_NAME)
 
-shortz = shortzy.Shortzy(SHORTENER_API, "sl.techwrd.in")
+shortz = shortzy.Shortzy(SHORTENER_API, "shareus.in")
 async def get_shortlink(link):
     if SHORTENER_API:
         if LONG_DROPLINK_URL == "True" or LONG_DROPLINK_URL is True:
