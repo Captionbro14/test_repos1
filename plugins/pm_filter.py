@@ -108,7 +108,7 @@ async def next_page(bot, query):
             ],
         )
     btn.insert(0, [
-        InlineKeyboardButton('How To Download', url='https://youtube.com/shorts/8qFxD4ZeKTE?feature=share')
+        InlineKeyboardButton('How To Download', url='https://t.me/DisNeyan/41')
     ])
     try:
         await query.edit_message_reply_markup(
