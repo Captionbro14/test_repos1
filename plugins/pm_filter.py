@@ -677,7 +677,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
              )   
     btn.insert(0, [
-        InlineKeyboardButton('How To Download', url='https://youtube.com/shorts/8qFxD4ZeKTE?feature=share')
+        InlineKeyboardButton('How To Download', url='https://t.me/DisNeyan/41')
     ])    
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
