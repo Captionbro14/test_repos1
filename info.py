@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['17424451'])
-API_HASH = environ['d36e8e6fb25126ce12635467b968629e']
-BOT_TOKEN = environ['5530499051:AAEkWo6pQXeEtq3Q6MhV901_3SkOIfD7oqM']
+API_ID = int(environ.get('API_ID', '17424451'))
+API_HASH = environ.get('API_HASH', 'd36e8e6fb25126ce12635467b968629e')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5530499051:AAEkWo6pQXeEtq3Q6MhV901_3SkOIfD7oqM')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -41,7 +41,7 @@ LOG_CHANNEL = int(environ.get('-1001797084635', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
