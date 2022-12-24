@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID', '17424451'])
-API_HASH = environ['API_HASH', 'd36e8e6fb25126ce12635467b968629e']
-BOT_TOKEN = environ['BOT_TOKEN', '5530499051:AAEkWo6pQXeEtq3Q6MhV901_3SkOIfD7oqM']
+API_ID = int(environ['17424451'])
+API_HASH = environ['d36e8e6fb25126ce12635467b968629e']
+BOT_TOKEN = environ['5530499051:AAEkWo6pQXeEtq3Q6MhV901_3SkOIfD7oqM']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -26,7 +26,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001795756446').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1337253768').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', 'MdiskZone')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001536951394')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -37,7 +37,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001797084635'))
+LOG_CHANNEL = int(environ.get('-1001797084635', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
@@ -64,5 +64,5 @@ LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies 
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
-SHORTENER_API = environ.get("SHORTENER_API", '0883b1c975962cca0062002b9c161764f66c367a')
+SHORTENER_API = environ.get("0883b1c975962cca0062002b9c161764f66c367a")
 LONG_DROPLINK_URL = environ.get("LONG_DROPLINK_URL", False)
